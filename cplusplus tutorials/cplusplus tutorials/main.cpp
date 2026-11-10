@@ -32,13 +32,18 @@ int main(int argc, char* argv[])
         << +background.getGreen() << ","
         << +background.getBlue() << endl;
 
-    Colour anotherOne(255, 255, 255); //static colour
+    Colour anotherOne(255, 255, 255,0.5f); //static colour
     cout << +anotherOne.getRed() << ","
         << +anotherOne.getGreen() << ","
         << +anotherOne.getBlue() << endl;
+    cout << "Alpha: " << anotherOne.getAlpha() << endl;
+
+    anotherOne.setAlpha(0.8f);
+
+    cout << "New Alpha: " << anotherOne.getAlpha() << endl;
     Colour* justOneMore; // dynamic colour on heap.
     //new allocates memory and calls constructor.
-    justOneMore = new Colour(255, 255, 0);
+    justOneMore = new Colour(255, 255, 0,1.0f);
 
     cout << +justOneMore->getRed() << ","
         << +justOneMore->getGreen() << ","
@@ -51,5 +56,20 @@ int main(int argc, char* argv[])
         << +maxTest.getGreen() << ","
         << +maxTest.getBlue() << endl;
     cout << "Colour max " << +Colour::MAX << endl;
+    Colour testColour(100, 150, 200, 0.5f);
+
+    cout << "Before brighten: "
+        << +testColour.getRed() << ","
+        << +testColour.getGreen() << ","
+        << +testColour.getBlue() << endl;
+
+    testColour.brighten();
+
+    cout << "After brighten: "
+        << +testColour.getRed() << ","
+        << +testColour.getGreen() << ","
+        << +testColour.getBlue() << endl;
+
+    cout << "Alpha: " << testColour.getAlpha() << endl;
     exit(0);
 }

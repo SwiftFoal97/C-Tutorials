@@ -11,9 +11,10 @@ private:
     unsigned char red;
     unsigned char green;
     unsigned char blue;
+    float alpha; 
 public:
     Colour();    //Constructor
-    Colour(unsigned char, unsigned char, unsigned char); //Overloaded
+    Colour(unsigned char, unsigned char, unsigned char, float); //Overloaded
     ~Colour();   //Destructor
 
     //Access methods
@@ -25,7 +26,9 @@ public:
 
     void setBlue(unsigned char blue);
     unsigned char getBlue();
-
+    void setAlpha(float alpha);
+    float getAlpha();
+    void brighten(void);
     static const unsigned char MAX = 255;
 };
 #endif

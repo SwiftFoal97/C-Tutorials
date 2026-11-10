@@ -9,13 +9,15 @@ Colour::Colour()
     red = MAX;
     blue = MAX;
     green = MAX;
+    alpha = 1.0f;
 }
 
-Colour::Colour(unsigned char r, unsigned char g, unsigned char b)
+Colour::Colour(unsigned char r, unsigned char g, unsigned char b, float a)
 {
     setRed(r);
     setGreen(g);
     setBlue(b);
+    setAlpha(a);
 }
 
 Colour::~Colour()
@@ -50,4 +52,30 @@ void Colour::setBlue(unsigned char blue)
 unsigned char Colour::getBlue()
 {
     return blue;
+}
+void Colour::setAlpha(float alpha)
+{
+    this->alpha = alpha;
+}
+
+float Colour::getAlpha()
+{
+    return alpha;
+}
+void Colour::brighten(void)
+{
+    if (red < MAX)
+    {
+        red++;
+    }
+
+    if (green < MAX)
+    {
+        green++;
+    }
+
+    if (blue < MAX)
+    {
+        blue++;
+    }
 }
