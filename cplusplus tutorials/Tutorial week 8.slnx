@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="cplusplus tutorials/cplusplus tutorials.vcxproj" Id="6bbfd500-ae28-4115-b17d-c84e553cd362" />
+  <Project Path="simple tasks/simple tasks.vcxproj" Id="6e995740-bc99-4c49-acfc-8a6656098827" />
 </Solution>

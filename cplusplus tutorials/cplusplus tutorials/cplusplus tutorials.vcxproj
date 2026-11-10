@@ -24,6 +24,7 @@
     <ProjectGuid>{6bbfd500-ae28-4115-b17d-c84e553cd362}</ProjectGuid>
     <RootNamespace>cplusplustutorials</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Tutorial8 tasks 1-7</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
